@@ -238,6 +238,14 @@
     maintainer-scripts = "debian/"
     systemd-units = { enable = true }
 
+  [package.metadata.deb.variants.postgresql]
+    suggests = "postgresql, mosquitto, redis"
+
+  [package.metadata.deb.variants.sqlite]
+    default-features = false
+    features = ["sqlite"]
+    suggests = "sqlite3, mosquitto, redis"
+
   [package.metadata.generate-rpm]
     auto-req = "no"
 
