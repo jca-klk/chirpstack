@@ -238,7 +238,7 @@
     maintainer-scripts = "debian/"
     systemd-units = { enable = true }
 
-  [package.metadata.deb.variants.postgresql]
+  [package.metadata.deb.variants.postgres]
     suggests = "postgresql, mosquitto, redis"
 
   [package.metadata.deb.variants.sqlite]
