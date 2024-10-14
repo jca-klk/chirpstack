@@ -273,6 +273,6 @@ chmod 640 /etc/chirpstack/*.toml
     ]
 
   [package.metadata.generate-rpm.variants.postgres]
-    conflicts = "chirpstack-sqlite"
+    conflicts = ["chirpstack-sqlite"]
   [package.metadata.generate-rpm.variants.sqlite]
-    conflicts = "chirpstack-postgres"
+    conflicts = ["chirpstack-postgres"]
