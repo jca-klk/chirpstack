@@ -21,9 +21,9 @@ dist:
 	cargo deb --target armv7-unknown-linux-musleabihf --no-build --no-strip --variant="$(DATABASE)"
 	cargo deb --target aarch64-unknown-linux-musl --no-build --no-strip --variant="$(DATABASE)"
 
-	cargo generate-rpm --target x86_64-unknown-linux-musl --target-dir ../target
-	cargo generate-rpm --target armv7-unknown-linux-musleabihf --target-dir ../target
-	cargo generate-rpm --target aarch64-unknown-linux-musl --target-dir ../target
+	cargo generate-rpm --target x86_64-unknown-linux-musl --target-dir ../target --variant="$(DATABASE)"
+	cargo generate-rpm --target armv7-unknown-linux-musleabihf --target-dir ../target --variant="$(DATABASE)"
+	cargo generate-rpm --target aarch64-unknown-linux-musl --target-dir ../target --variant="$(DATABASE)"
 
 	mkdir -p ../dist
 
